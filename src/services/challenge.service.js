@@ -8,31 +8,33 @@ const { Challenge } = require('../models');
 const queryChallenges = async (filter) => {
   const Challenges = await Challenge.aggregate([
     {
-      '$addFields': {
-        'totalCount': {
-          '$sum': '$counts'
-        }
-      }
-    }, {
-      '$match': {
-        'createdAt': {
-          '$gte': new Date(filter.startDate),
-          '$lte': new Date(filter.endDate)
+      $addFields: {
+        totalCount: {
+          $sum: '$counts',
         },
-        'totalCount': {
-          '$gte': filter.minCount,
-          '$lte': filter.maxCount
-        }
-      }
-    }, {
+      },
+    },
+    {
+      $match: {
+        createdAt: {
+          $gte: new Date(filter.startDate),
+          $lte: new Date(filter.endDate),
+        },
+        totalCount: {
+          $gte: filter.minCount,
+          $lte: filter.maxCount,
+        },
+      },
+    },
+    {
       $project: {
-        'createdAt': 1,
-        'totalCount': 1,
-        'key': 1,
-        '_id': 0
-      }
-    }
-  ])
+        createdAt: 1,
+        totalCount: 1,
+        key: 1,
+        _id: 0,
+      },
+    },
+  ]);
   return Challenges;
 };
 

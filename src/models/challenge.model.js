@@ -14,12 +14,13 @@ const challengeSchema = mongoose.Schema(
     },
     counts: {
       type: Array,
-      required: true
+      required: true,
     },
     value: {
-      type: String
-    }
-  }, {}
+      type: String,
+    },
+  },
+  {}
 );
 
 // add plugin that converts mongoose to json

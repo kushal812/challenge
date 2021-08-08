@@ -7,8 +7,8 @@ describe('Challenge model', () => {
     beforeEach(() => {
       record = {
         key: faker.name.findName(),
-        createdAt: "2016-05-04T05:15:21.742Z",
-        counts: [1,2]
+        createdAt: '2016-05-04T05:15:21.742Z',
+        counts: [1, 2],
       };
     });
 
