@@ -1,0 +1,44 @@
+components:
+  schemas:
+    Challenge:
+      type: object
+      properties:
+        key:
+          type: string
+        createdAt:
+          type: string
+          format: date
+        totalCount:
+          type: number
+      example:
+          key: TAKwGc6Jr4i8Z487
+          createdAt: 2017-01-28T01:22:14.398+00:00
+          totalCount: 10
+
+    Error:
+      type: object
+      properties:
+        code:
+          type: number
+        message:
+          type: string
+
+  responses:
+    StartDateInvalid:
+      description: Start date invalid
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            code: 400
+            message: \"startDate\" must be in iso format
+    NotFound:
+      description: Not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            code: 404
+            message: Not found

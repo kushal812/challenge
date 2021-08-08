@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Challenge routes POST /v1/challenge should return 200 and apply the default query options 1`] = `
+Object {
+  "code": 0,
+  "msg": "Success",
+  "records": Array [
+    Object {
+      "createdAt": "2016-10-06T09:03:06.664Z",
+      "key": "XVSJAafS",
+      "totalCount": 7,
+    },
+    Object {
+      "createdAt": "2016-06-13T14:21:11.684Z",
+      "key": "HFrLrkmu",
+      "totalCount": 4,
+    },
+    Object {
+      "createdAt": "2016-05-04T05:15:21.742Z",
+      "key": "nksTNdZi",
+      "totalCount": 7,
+    },
+  ],
+}
+`;
