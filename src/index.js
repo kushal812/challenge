@@ -11,7 +11,6 @@ mongoose.connect(config.mongoose.url, config.mongoose.options).then((connection)
   });
 });
 
-
 const exitHandler = () => {
   if (server) {
     server.close(() => {
