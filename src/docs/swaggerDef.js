@@ -1,19 +1,18 @@
 const { version } = require('../../package.json');
-const config = require('../config/config');
 
 const swaggerDef = {
   openapi: '3.0.0',
   info: {
-    title: 'node-express-boilerplate API documentation',
+    title: 'Challenge',
     version,
     license: {
       name: 'MIT',
-      url: 'https://github.com/hagopj13/node-express-boilerplate/blob/master/LICENSE',
+      url: 'https://github.com/kushal812/challenge.git',
     },
   },
   servers: [
     {
-      url: `http://localhost:${config.port}/v1`,
+      url: `https://tranquil-crag-18721.herokuapp.com/v1`,
     },
   ],
 };

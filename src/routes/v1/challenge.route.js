@@ -56,15 +56,21 @@ module.exports = router;
  *               minCount: 1
  *               maxCount: 10
  *     responses:
- *       "201":
+ *       "200":
  *         description: Created
  *         content:
  *           application/json:
  *             schema:
  *               type: object
  *               properties:
- *                 challenge:
- *                   $ref: '#/components/schemas/Challenge'
+ *                  code:
+ *                    type: number
+ *                    description: Status code
+ *                  msg:
+ *                    type: string
+ *                    description: response message
+ *                  records:
+ *                    $ref: '#/components/schemas/Records'
  *       "400":
  *         $ref: '#/components/responses/StartDateInvalid'
  */
