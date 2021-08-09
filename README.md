@@ -31,3 +31,12 @@ Swagger
 ```bash
 https://tranquil-crag-18721.herokuapp.com/v1/docs/
 ```
+
+
+## Test
+
+To run test cases
+
+```bash
+npm run test
+```
